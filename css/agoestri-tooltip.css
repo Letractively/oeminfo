@@ -1,0 +1,51 @@
+/* CSS Document */
+body{
+}
+#containerTooltip{
+	display:none;
+	-webkit-box-shadow: 0 10px 10px rgba(0,0,0,.7);
+	-moz-box-shadow: 0 0px 10px rgba(0,0,0,.7);
+}
+.lepasPakaian{
+	display:none;
+}
+.pasangPakaian{
+	min-width:100px;
+	min-height:10px;
+	position:absolute;
+	z-index:999;
+	background-color:rgba(0, 0, 0, 0.4);
+	padding:3px;
+	-moz-border-radius:10px;	
+	-webkit-border-radius:10px;	
+s	min-width:90px;	overflow:auto;
+}
+.tooltipInner{
+	min-width:40x;
+	min-height:30px;
+	overflow:auto;
+	background-color:rgba(139,231,92,0.8);
+	-moz-border-radius:5px;	
+	-webkit-border-radius:5px;	
+	font-family:Arial;
+	font-size:12px;
+	padding:5px;
+	overflow:auto;
+	white-space:nowrap;
+	float:left;
+}
+.tooltipInner1{
+	margin:0px auto;
+	min-width:40x;
+	min-height:10px;
+	overflow:auto;
+	background-color:#FFF;
+	-moz-border-radius:5px;	
+	-webkit-border-radius:5px;	
+	font-family:Arial;
+	font-size:12px;
+	padding:2px;
+	overflow:auto;
+	white-space:nowrap;
+	float:left;
+}
