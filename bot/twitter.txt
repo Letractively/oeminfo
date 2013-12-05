@@ -1,0 +1,16 @@
+<?php
+require_once('/home/www/ffcbf6f72042536a41ee3fdb221f9a6f/web/cgi-bin/lmc/twitteroauth.php');
+define('CONSUMER_KEY', 'zFSaEhvmzGwwfIVp1GlNrA');
+define('CONSUMER_SECRET', 'FsdE1V4dkTusO4Z4eJocNryL1B6RP0hXPzcieSQkkQ');
+define('ACCESS_TOKEN', '1277460908-Q3pzqmMSyPCSgQPKUSjvGGYwdjeJoWQiSru4oKS');
+define('ACCESS_TOKEN_SECRET', 'y3TymcrT9SAI47Powg8QpGUYRKCMNjOMbfIzOwmiWs4y0');
+$twitter = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
+$twitter->host = "https://api.twitter.com/1.1/";
+if(!empty($_GET['bot'])){
+$status = $_GET['bot'];
+} else {
+$status = "Test Bot Twitter";
+}
+ if(strlen($status) > 140) $status = substr($status, 0, 139);
+ $twitter->post('statuses/update', array('status' => $status));
+?>
