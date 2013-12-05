@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+use IO::Socket;
+use IO::Select;
+use Socket;
+@pesan = (
+"Twitter%20Bot",
+"http://bhieneka.blogspot.com%20emang%20keren",
+);
+
+$len = @pesan;
+my $status = @pesan[int rand($len)];
+my $url1 = ("http://URL_DOMAINMU/twitter.php?stat=$status");
